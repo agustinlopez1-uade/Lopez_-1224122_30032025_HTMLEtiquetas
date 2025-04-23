@@ -72,6 +72,8 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0.2em 0.7em rgba(0, 0, 0, 0.25);
+  line-height: 1.2;
+  padding: 0.1em 0;
 }
 
 /*Navegacion*/
@@ -216,6 +218,13 @@ footer {
 
 /* ----------- Responsive ----------- */
 @media (max-width: 768px) {
+
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      word-break: break-word;
+    }
+
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -239,5 +248,27 @@ footer {
   
     .nav-links a {
         padding: 0.5em 0;
+    }
+
+    #contenedor {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding: 1.5em 1em;
+    }
+  
+    .contenedor-izq, 
+    .contenedor-der {
+      width: 100%;
+      padding: 0;
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+  
+    #izq-arriba,
+    #izq-abajo {
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 }
