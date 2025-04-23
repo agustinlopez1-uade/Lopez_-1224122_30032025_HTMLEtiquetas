@@ -1,0 +1,243 @@
+:root {
+    --degradado-1: #ff416c;
+    --degradado-2: #ff4b2b;
+    --degradado-3: #9b59b6;
+    --degradado-4: #3b2667;
+  
+    --texto-principal: #ffffff;
+    --texto-secundario: #d1d5db;
+    --acento: #00d1ff;
+    --acento-suave: #ffc107;
+    --rojo: #ff0000;
+  
+    --fuente-titulos: 'DM Sans', sans-serif;
+    --fuente-texto: 'Inter', sans-serif;
+}
+  
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom right,
+    var(--degradado-1),
+    var(--degradado-2),
+    var(--degradado-3),
+    var(--degradado-4)
+  );
+  color: var(--texto-principal);
+  font-family: var(--fuente-texto);
+  font-size: 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 2em 1em;
+}
+
+.subintro {
+  font-size: 1.75em;
+  font-weight: 500;
+  color: var(--texto-principal);
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  text-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.sub-subintro {
+  font-size: 1.1em;
+  font-weight: 800;
+  color: var(--acento-suave);
+  margin-top: 1em;
+  margin-bottom: 0;
+  text-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: 3.5em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(to right, #fff, var(--acento));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0.2em 0.7em rgba(0, 0, 0, 0.25);
+}
+
+/*Navegacion*/
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: var(--texto-principal);
+  margin: 0 0.6em;
+  padding: 0.75em 1.25em;
+  font-size: 1em;
+  font-family: var(--fuente-titulos);
+  text-decoration: none;
+  transition: text-shadow 0.2s ease;
+}
+
+nav a:hover {
+  text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+
+/* CONTENEDORES */
+
+#contenedor {
+    display: grid;
+    grid-template-columns: auto auto; /* izquierda y derecha */
+    grid-template-rows: auto auto;    /* dos filas */
+    gap: 2em;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+#izq-arriba {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 1em;
+}
+
+#izq-abajo {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1em;
+}
+
+.contenedor-der {
+  grid-column: 2;
+  grid-row: 1 / span 2; /* ocupa ambas filas */
+  padding: 1em;
+}
+
+  /*Lista Contenedor*/
+
+.contenedor-lista {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 0.5em;
+  padding: 2em;
+  padding-top: 0.5em;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.lista-contenido {
+  list-style: none;
+  padding-left: 0;
+  margin: 2px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.importante {
+  color: var(--acento-suave);
+  font-weight: bold;
+  padding: 0.7em 1.2em 0.7em 1.2em;
+  border-radius: 0.3em;
+  text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+
+.lista-contenido li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 0.7em 0;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  transition: background-color 0.3s ease;
+}
+
+.lista-contenido a{
+color: var(--texto-principal);
+text-decoration: none;
+font-weight: 500;
+border-bottom: 1px solid rgba(255,255,255,0.1);
+padding: 0.7em 1.2em 0.7em 1.2em;
+border-radius: 0.3em;
+text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+.lista-contenido a:hover{
+color: var(--acento-suave);
+text-decoration: underline;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icono {
+  display: none;
+  font-size: 2em;
+  color: var(--texto-principal);
+  cursor: pointer;
+  margin-left: 1em;
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1em;
+}
+
+
+/*Footer*/
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 1em;
+  color: var(--texto-secundario);
+}
+  
+  
+
+
+/* ----------- Responsive ----------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+  
+    .menu-icono {
+        display: block;
+    }
+  
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1em;
+    }
+  
+    #menu-toggle:checked + .menu-icono + .nav-links {
+        display: flex;
+    }
+  
+    .nav-links a {
+        padding: 0.5em 0;
+    }
+}
